@@ -15,9 +15,10 @@ class Solution:
         counter = 0
         
         while True:
-            print("while")
+            print(f'after while count => {count} and counter => {counter}')
             
             temp = self.compareString(strs[count], result)
+            print("temp => ", temp)
             
             if (temp == 0):
                 if(counter == 2):
@@ -37,7 +38,10 @@ class Solution:
                 break
                 
             if(count == l-1):
-                count = counter = 0
+                count = 0
+                
+            if counter == 3:
+                counter = 0
                 
             count += 1
             print(f'before end count => {count} and temp => {temp} and counter => {counter}')
@@ -56,6 +60,7 @@ class Solution:
 # @lc code=end
 
 soln = Solution()
-result = soln.longestCommonPrefix(["flower","flow","flight"]
+# result = soln.longestCommonPrefix(["flower","flow","flight"]
+result = soln.longestCommonPrefix(["flower","dog","cat"]
 )
 print(result)
